@@ -3,11 +3,12 @@
 <head>
 <link rel="stylesheet" href="css/styles.css">
 <script src="script/dragdrop.js"></script>
-<title>Title of the document</title>
+<script src="script/logic.js"></script>
+<title>Organizational Chart</title>
 </head>
 
 <body>
-The content of the document......
+Please Drag + Drop to crete the Org-Chart
 
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
