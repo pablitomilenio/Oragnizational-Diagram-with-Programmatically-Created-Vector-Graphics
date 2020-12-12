@@ -12,6 +12,8 @@ function Person(first, last, age, eyecolor) {
 
 // real code
 
+var employeeList = new Array();
+
 var ceo = new Employee("Jeffrey", "Immelt", "jeffrey.immelt@ge.com", null);
 
 var defaultEmployee = new Employee("Pedro", "Vega", "pedro.vega@mycompany.com", ceo);
@@ -28,6 +30,9 @@ function Employee(first, last, email, direct_superior) {
         this.direct_superior = newSuperior;
         console.log("the new boss of" + this.firstName + "is" +  newSuperior.name);
     };
-  }
+    this.addEmployee = function () {
+        employeeList.push(this);
+    }
+    this.addEmployee();
+}
 
-  
