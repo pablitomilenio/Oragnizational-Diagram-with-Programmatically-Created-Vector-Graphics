@@ -3,7 +3,7 @@ body {
 }
 
 div {
-    background-color: lightcoral;
+    background-color: transparent;
 }
 
 img {
@@ -31,7 +31,8 @@ img {
     visibility: visible;
     display: inline-block;
     margin: auto;
-    width: 200px;
-    height: 300px;
+    margin-left: 20px;
+    width: 102px;
+    height: 116px;
     background-color: aquamarine;
 }
