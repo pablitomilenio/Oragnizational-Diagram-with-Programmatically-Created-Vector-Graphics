@@ -15,8 +15,14 @@ Please Drag + Drop to crete the Org-Chart
 <!-- <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div> -->
 
 <div id='subord_list'>
-<div id='employee1' class='anEmployee' ondrop="drop(event); addBox(); dupIcon();" ondragover="allowDrop(event)"></div>
-<div class='anEmployee' ondrop="drop(event); addBox(); dupIcon();" ondragover="allowDrop(event)"></div>
+<div id='employee1' class='anEmployee' ondrop="drop(event); addBox(); dupIcon();" 
+    ondragover="allowDrop(event)">
+    <div>Name</div><div>Surname</div>
+</div>
+<div class='anEmployee' ondrop="drop(event); addBox(); dupIcon();" 
+    ondragover="allowDrop(event)">
+    <div>Name</div><div>Surname</div>
+</div>
 </div>
 
 <div id='icontain'> 
