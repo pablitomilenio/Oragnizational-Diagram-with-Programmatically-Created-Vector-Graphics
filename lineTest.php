@@ -25,8 +25,13 @@ Org Chart
 				</femerge>
 			</filter>
 		</defs>
-     <path class="exampleGlow" d="M 10 30 C 40 10, 65 10, 95 80 S 150 150, 180 80" style="fill-opacity: 0; stroke-width: 2; filter: url(#glow);" transform="translate(-250,-80)"/></path>
-	</g></svg>
+
+<path class="glowLine" d="M 45 225 C 55 279 236 231 218 285" transform="translate(-250,-280)"/></path>
+<path class="glowLine" d="M 164 225 C 164 275 218 235 218 285" transform="translate(-250,-280)"/></path>
+<path class="glowLine" d="M 273 225 C 273 275 218 235 218 285" transform="translate(-250,-280)"/></path>
+<path class="glowLine" d="M 382 225 C 382 279 218 231 218 285" transform="translate(-250,-280)"/></path>		
+		
+		</g></svg>
 
 
 

@@ -1,23 +1,13 @@
-function addBox() {
-    $("#employee1")
-    .clone()
-    .removeAttr('id')
-    .appendTo("#subord_list");
-}
-
-function dupIcon () {
-// this function runs on drop
-// 
-
-$("#origSymb")
-.clone()
-.appendTo(".anEmployee:first");
-//.attr('id','dupE');
-
-//fixes iContain
-    $("#icontain").empty();
-
-    $("#origSymb")
-    .clone()
-    .appendTo("#icontain");
+function UnionSkelleton(xCenter, yCenter, width, height, numElements) {
+    this.
+    this.xStart = xCenter;
+    this.yStart = yCenter;
+    this.width = width;
+    this.height = height;
+    this.numElements = numElements;
+    this.getXCoords = function() {
+        let xArray = new Array();
+        let xDistance = this.width / numElements;
+        return this.firstName + " " + this.lastName;
+    };
 }

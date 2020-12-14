@@ -1,11 +1,17 @@
 body{ 
-    background: black;
-  }
-  
-  svg .exampleGlow {
-    stroke: red;
-  }
-  
-  svg .exampleGlow:hover {
-    stroke: blue;
-  }
+  background: black;
+}
+
+svg .glowLine {
+  stroke: gray;
+}
+
+svg .glowLine:hover {
+  stroke: red;
+  filter: url(#glow);
+}
+
+path {
+  fill-opacity: 0; 
+  stroke-width: 2; 
+}
