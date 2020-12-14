@@ -10,6 +10,21 @@
 </head>
 
 <body>
+
+<?php
+require_once 'config.php';
+ 
+try {
+    $adapter->authenticate();
+    $userProfile = $adapter->getUserProfile();
+    print_r($userProfile);
+    echo '<a href="logout.php">Logout</a>';
+}
+catch( Exception $e ){
+    echo $e->getMessage() ;
+} 
+?>
+
 Please Drag + Drop to crete the Org-Chart
 
 <!-- <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div> -->
