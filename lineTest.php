@@ -12,8 +12,9 @@
 <body>
 Org Chart
 
+<div id='cont'>
 <svg height="300" width="824">
-	<g class="svgWrapper" transform="translate(412,80)">
+	<g id="wr" transform="translate(412,80)">
 		<defs>
 			<filter id="glow">
 				<fegaussianblur class="blur" result="coloredBlur" stddeviation="8"></fegaussianblur>
@@ -26,12 +27,8 @@ Org Chart
 			</filter>
 		</defs>
 
-<path class="glowLine" d="M 45 225 C 55 279 236 231 218 285" transform="translate(-250,-280)"/></path>
-<path class="glowLine" d="M 164 225 C 164 275 218 235 218 285" transform="translate(-250,-280)"/></path>
-<path class="glowLine" d="M 273 225 C 273 275 218 235 218 285" transform="translate(-250,-280)"/></path>
-<path class="glowLine" d="M 382 225 C 382 279 218 231 218 285" transform="translate(-250,-280)"/></path>		
-		
-		</g></svg>
+	</g></svg>
+</div>
 
 
 
