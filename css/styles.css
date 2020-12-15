@@ -11,6 +11,17 @@ svg .glowLine:hover {
   filter: url(#glow);
 }
 
+svg .pCircle {
+  stroke: gray;
+  fill: red;
+  stroke-width: 2px;
+}
+
+svg .pCircle:hover {
+  stroke: blue;
+}
+
+
 path {
   fill-opacity: 0; 
   stroke-width: 2; 
