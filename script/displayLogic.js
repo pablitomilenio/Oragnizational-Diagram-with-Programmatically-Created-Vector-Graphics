@@ -1,57 +1,75 @@
-function UnionSkeleton(xCenter, yStart, width, height, numPoints) {
-    this.xStart = xCenter;
+class OrgChart {
+  
+}
+
+class Team {
+  
+}
+
+class PersonCircles {
+  constructor(a,b){}
+}
+
+
+class UnionSkeleton { 
+    constructor (xCenter, yStart, width, height, numPoints, wrapperId) {
+    this.xCenter = xCenter
     this.yStart = yStart;
     this.width = width;
     this.height = height
     this.numPoints = numPoints;
     this.isEven = true;
-    this.finalPoint = [xCenter,(yStart+height)];
-    this.ctrlPoint1Y = (yStart+height-10);
+    this.finalPoint = [xCenter,(yStart-height)];
+    this.ctrlPoint1Y = (yStart-height+10);
     this.ctrlPoint2 = [xCenter,Math.round(-1*height/1.2+yStart+height)];
-    this.getXCoords = function() {
+    this.wrapperId = wrapperId;
+  }
+  
+  
+    getXCoords() {
         let isEven = this.isEven;
         let xArray = new Array();
         let xDistance = this.width / (this.numPoints-1);
         let minX = 0;
-        if ((numPoints%2) != 0) isEven = false;
+        if ((this.numPoints%2) != 0) isEven = false;
         if(!isEven) {
-          minX =  xCenter - Math.floor(numPoints/2)*xDistance;
+          let minX =  this.xCenter - Math.floor(this.numPoints/2)*xDistance;
           xArray.push(Math.round(minX));
-        } else {
-          minX =  xCenter - (numPoints/2)*xDistance+(xDistance/2);
+        } else { //isEven
+          minX =  this.xCenter - (this.numPoints/2)*xDistance+(xDistance/2);
           xArray.push(Math.round(minX));
         }
-        for(i=1;i<(numPoints);i++) xArray.push(Math.round(minX+xDistance*i));
+        for(let i=1;i<(this.numPoints);i++) xArray.push(Math.round(minX+xDistance*i));
         return xArray;
-    };
-    this.generateD = function() {
+    }
+  
+    generateD() {
       let xArr = this.getXCoords();
       let dArr = new Array();
-      
-      for(j=0;j<xArr.length;j++) {
+      for(let j=0;j<xArr.length;j++) {
         dArr.push (
-        "M "+xArr[j] + " " + yStart + " C " + xArr[j] + " " 
+        "M "+xArr[j] + " " + this.yStart + " C " + xArr[j] + " " 
         + this.ctrlPoint1Y  + "  " + this.ctrlPoint2[0] + " " + this.ctrlPoint2[1] 
         + "  " + this.finalPoint[0] + " " + this.finalPoint[1]       
         );
       }
-    return dArr;
-    };
-    this.addLines = function(wrapperId) {
+      return dArr;
+    }
+
+    addLines() {
       let dArr = this.generateD();
-      this.wrapperId = wrapperId;
-      
+      let wid = this.wrapperId;
       dArr.forEach(function(item){
-        $('#'+wrapperId).append(
-          '<path class="glowLine" d="'+item+'" transform="translate(-250,-280)"/></path>'
+        $('#'+wid).append(
+          '<path class="glowLine" d="'+item+'" transform="translate(-250,-220)"/></path>'
         );
       });
-      
-      
-    };
+
+    }
+
 }
 
-let u = new UnionSkeleton(218,225,337,60,4);
-u.addLines('wr');
+let u = new UnionSkeleton(218,225,337,80,4,'wr');
+u.addLines();
 
 $("#cont").html($("#cont").html());
